@@ -83,10 +83,6 @@
 			}
 		],
 		"parameters": {
-			"inputPath ": {
-				"type": "string",
-				"defaultValue": "/Input"
-			},
 			"outputPath": {
 				"type": "string",
 				"defaultValue": "/Output"
