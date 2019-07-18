@@ -66,12 +66,8 @@
 				"typeProperties": {
 					"notebookPath": "/Users/ukanya.sawant1@cgm4l.onmicrosoft.com/Notebook1",
 					"baseParameters": {
-						"input": {
-							"value": "@pipeline().parameters.input",
-							"type": "Expression"
-						},
 						"output": {
-							"value": "@pipeline().parameters.output",
+							"value": "@pipeline().parameters.outputPath",
 							"type": "Expression"
 						},
 						"filename": {
@@ -87,11 +83,11 @@
 			}
 		],
 		"parameters": {
-			"input ": {
+			"inputPath ": {
 				"type": "string",
 				"defaultValue": "/Input"
 			},
-			"output": {
+			"outputPath": {
 				"type": "string",
 				"defaultValue": "/Output"
 			},
