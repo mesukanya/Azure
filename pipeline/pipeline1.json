@@ -54,14 +54,7 @@
 			{
 				"name": "Notebook1",
 				"type": "DatabricksNotebook",
-				"dependsOn": [
-					{
-						"activity": "Copy Data1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -73,9 +66,18 @@
 				"typeProperties": {
 					"notebookPath": "/Users/ukanya.sawant1@cgm4l.onmicrosoft.com/Notebook1",
 					"baseParameters": {
-						"input": "@pipeline().parameters.input",
-						"output": "@pipeline().parameters.output",
-						"filename": "@pipeline().parameters.filename"
+						"input": {
+							"value": "@pipeline().parameters.input",
+							"type": "Expression"
+						},
+						"output": {
+							"value": "@pipeline().parameters.output",
+							"type": "Expression"
+						},
+						"filename": {
+							"value": "@pipeline().parameters.filename",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
