@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Data1",
+				"name": "Copy_CSV_File",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -52,11 +52,11 @@
 				]
 			},
 			{
-				"name": "Notebook1",
+				"name": "Fetch_Csv_Data",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "Copy Data1",
+						"activity": "Copy_CSV_File",
 						"dependencyConditions": [
 							"Succeeded"
 						]
