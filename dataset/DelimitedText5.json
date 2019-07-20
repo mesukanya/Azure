@@ -10,9 +10,9 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "house-prices.csv",
+				"fileName": "bike_sharing.csv",
 				"folderPath": "Input",
-				"container": "reviewblob"
+				"container": "blobforonpremisesdb"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
