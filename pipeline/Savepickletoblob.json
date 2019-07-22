@@ -84,6 +84,14 @@
 						"filepath": {
 							"value": "@pipeline().parameters.file_path",
 							"type": "Expression"
+						},
+						"accountname": {
+							"value": "@pipeline().parameters.account_name",
+							"type": "Expression"
+						},
+						"accountkey": {
+							"value": "@pipeline().parameters.account_key",
+							"type": "Expression"
 						}
 					}
 				},
@@ -105,6 +113,14 @@
 			"file_path": {
 				"type": "string",
 				"defaultValue": "house-prices.csv"
+			},
+			"account_name": {
+				"type": "string",
+				"defaultValue": "storageaccount7766"
+			},
+			"account_key": {
+				"type": "string",
+				"defaultValue": "8YxCdC34sDcBWPDR4cOzJWbJ1HlXcLpSB5Jt33WTWt8+I7H2rvfGPI4uHBYiKwF0zGqAuLRDJeOF358aTOEVGw=="
 			}
 		},
 		"annotations": []
