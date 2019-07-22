@@ -74,15 +74,15 @@
 					"notebookPath": "/Users/ukanya.sawant1@cgm4l.onmicrosoft.com/Week6Notebook",
 					"baseParameters": {
 						"input": {
-							"value": "@pipeline().parameters.input_path ",
+							"value": "@pipeline().parameters.input_path",
 							"type": "Expression"
 						},
 						"output": {
-							"value": "@pipeline().parameters.output_path ",
+							"value": "@pipeline().parameters.output_path",
 							"type": "Expression"
 						},
 						"filename": {
-							"value": "@pipeline().parameters.filepath ",
+							"value": "@pipeline().parameters.filepath",
 							"type": "Expression"
 						},
 						"picklefilepath": {
