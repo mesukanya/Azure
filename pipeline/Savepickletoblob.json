@@ -1,0 +1,112 @@
+{
+	"name": "Savepickletoblob",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopyFileToBlob",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSetting",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSetting"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSetting"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSetting",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText7",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText8",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "copyPickletoblob",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "CopyFileToBlob",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/ukanya.sawant1@cgm4l.onmicrosoft.com/copypickletoblob",
+					"baseParameters": {
+						"input": {
+							"value": "@pipeline().parameters.input_path",
+							"type": "Expression"
+						},
+						"output": {
+							"value": "@pipeline().parameters.output_path",
+							"type": "Expression"
+						},
+						"filepath": {
+							"value": "@pipeline().parameters.file_path",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"input_path": {
+				"type": "string",
+				"defaultValue": "/Input"
+			},
+			"output_path": {
+				"type": "string",
+				"defaultValue": "/Output"
+			},
+			"file_path": {
+				"type": "string",
+				"defaultValue": "house-prices.csv"
+			}
+		},
+		"annotations": []
+	}
+}
