@@ -11,6 +11,12 @@
 		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
+		"CosmosDblinked service_connectionString": {
+			"value": ""
+		},
+		"bloblinkservicetoforcosmosdb_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
