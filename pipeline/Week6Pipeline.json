@@ -73,9 +73,22 @@
 				"typeProperties": {
 					"notebookPath": "/Users/ukanya.sawant1@cgm4l.onmicrosoft.com/Week6Notebook",
 					"baseParameters": {
-						"input": "@pipeline().parameters.input_path ",
-						"output": "@pipeline().parameters.output_path ",
-						"filename": "@pipeline().parameters.filepath "
+						"input": {
+							"value": "@pipeline().parameters.input_path ",
+							"type": "Expression"
+						},
+						"output": {
+							"value": "@pipeline().parameters.output_path ",
+							"type": "Expression"
+						},
+						"filename": {
+							"value": "@pipeline().parameters.filepath ",
+							"type": "Expression"
+						},
+						"picklefilepath": {
+							"value": "@pipeline().parameters.pickle_file_path",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
@@ -96,6 +109,10 @@
 			"filepath": {
 				"type": "string",
 				"defaultValue": "house-prices.csv"
+			},
+			"pickle_file_path": {
+				"type": "string",
+				"defaultValue": "/Output"
 			}
 		},
 		"annotations": []
