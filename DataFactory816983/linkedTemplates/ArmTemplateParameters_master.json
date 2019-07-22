@@ -14,7 +14,16 @@
 		"CosmosDblinked service_connectionString": {
 			"value": ""
 		},
+		"LInkServiceAzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"LinkServiceAzureDatabricks2_accessToken": {
+			"value": ""
+		},
 		"bloblinkservicetoforcosmosdb_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
 			"value": ""
 		},
 		"containerUri": {

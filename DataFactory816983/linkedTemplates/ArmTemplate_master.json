@@ -19,9 +19,21 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'CosmosDblinked service'"
 		},
+		"LInkServiceAzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LInkServiceAzureBlobStorage2'"
+		},
+		"LinkServiceAzureDatabricks2_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'LinkServiceAzureDatabricks2'"
+		},
 		"bloblinkservicetoforcosmosdb_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'bloblinkservicetoforcosmosdb'"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -59,8 +71,17 @@
 					"CosmosDblinked service_connectionString": {
 						"value": "[parameters('CosmosDblinked service_connectionString')]"
 					},
+					"LInkServiceAzureBlobStorage2_connectionString": {
+						"value": "[parameters('LInkServiceAzureBlobStorage2_connectionString')]"
+					},
+					"LinkServiceAzureDatabricks2_accessToken": {
+						"value": "[parameters('LinkServiceAzureDatabricks2_accessToken')]"
+					},
 					"bloblinkservicetoforcosmosdb_connectionString": {
 						"value": "[parameters('bloblinkservicetoforcosmosdb_connectionString')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
 					}
 				}
 			},
