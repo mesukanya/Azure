@@ -1,0 +1,14 @@
+{
+	"name": "DocumentDbCollection2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CosmoslinkSeviceToCopyBlobData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DocumentDbCollection",
+		"typeProperties": {
+			"collectionName": "Employee"
+		}
+	}
+}
